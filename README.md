@@ -1,6 +1,15 @@
 docker-minecraft-server
 =======================
 ORIGINAL: https://github.com/itzg/dockerfiles/tree/master/minecraft-server
+=======================
+
+git clone git@github.com:to0w1r3d/docker-minecraft-server
+
+cd docker-minecraft-server
+
+docker build -t minecraft_server .
+
+=======================
 
 This docker image provides a Minecraft Server that will automatically download the latest stable, latest snapshot, or any specific version.
 
