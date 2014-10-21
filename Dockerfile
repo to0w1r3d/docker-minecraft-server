@@ -1,7 +1,13 @@
-FROM itzg/ubuntu-openjdk-7
+FROM ubuntu:trusty
 
 MAINTAINER to0w1r3d
 #Original https://registry.hub.docker.com/u/itzg/minecraft-server/dockerfile/
+
+ENV APT_GET_UPDATE 2014-10-14
+RUN apt-get update
+RUN apt-get install -y openjdk-7-jre-headless
+
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 RUN apt-get install -y wget libmozjs-24-bin
 RUN update-alternatives --install /usr/bin/js js /usr/bin/js24 100
