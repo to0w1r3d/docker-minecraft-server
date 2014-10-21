@@ -1,6 +1,5 @@
 FROM ubuntu:trusty
-
-MAINTAINER to0w1r3d
+MAINTAINER to0w1r3d <to0w1r3d@gmail.com>
 #Original https://registry.hub.docker.com/u/itzg/minecraft-server/dockerfile/
 
 ENV APT_GET_UPDATE 2014-10-14
@@ -23,7 +22,8 @@ VOLUME ['/data']
 ADD server.properties /tmp/server.properties
 WORKDIR /data
 
-CMD /start
+#CMD /start
+CMD ["/start.sh"]
 
 ENV MOTD A Minecraft Server Powered by Docker
 ENV LEVEL world
